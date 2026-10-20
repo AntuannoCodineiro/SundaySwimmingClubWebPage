@@ -2,11 +2,11 @@
 <!-- Po uzupełnieniu dodaj polityka-prywatnosci.html i regulamin.html -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://sundayswimmingclub.pl/</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/klub.html</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/oferta.html</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/cennik.html</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/galeria.html</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/faq.html</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/kontakt.html</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/rezerwacje.html</loc></url>
+  <url><loc>https://sundayswimmingclub.pl/klub</loc></url>
+  <url><loc>https://sundayswimmingclub.pl/oferta</loc></url>
+  <url><loc>https://sundayswimmingclub.pl/cennik</loc></url>
+  <url><loc>https://sundayswimmingclub.pl/galeria</loc></url>
+  <url><loc>https://sundayswimmingclub.pl/faq</loc></url>
+  <url><loc>https://sundayswimmingclub.pl/kontakt</loc></url>
+  <url><loc>https://sundayswimmingclub.pl/rezerwacje</loc></url>
 </urlset>

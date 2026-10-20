@@ -79,7 +79,7 @@
     el.innerHTML =
       '<h2 id="cookies-tytul">Pliki cookies</h2>' +
       '<p id="cookies-opis">Niezbędne pliki działają zawsze, bo strona nie zadziała bez nich. Za Twoją zgodą włączymy też statystyki odwiedzin (Google Analytics) i treści zewnętrzne (widżet Instagrama). ' +
-      '<a href="polityka-prywatnosci.html#cookies">Polityka prywatności</a></p>' +
+      '<a href="polityka-prywatnosci#cookies">Polityka prywatności</a></p>' +
       '<div class="cookies-ustawienia" hidden>' +
         '<label class="cookies-opcja"><input type="checkbox" checked disabled><span><b>Niezbędne</b>Zapamiętują Twój wybór dotyczący cookies. Nie da się ich wyłączyć.</span></label>' +
         '<label class="cookies-opcja"><input type="checkbox" name="analityczne"><span><b>Statystyki</b>Google Analytics pokazuje nam, które podstrony są odwiedzane. Dane są zbiorcze.</span></label>' +
