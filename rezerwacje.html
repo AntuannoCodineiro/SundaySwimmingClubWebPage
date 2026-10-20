@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rezerwacje: umów pierwsze zajęcia | Sunday Swimming Club</title>
+  <meta name="description" content="Zapisz się na pierwsze zajęcia pływackie w Poznaniu: grupowe, solo lub w parze. Wybierz pływalnię i termin, trener potwierdza każde zgłoszenie.">
+  <link rel="canonical" href="https://sundayswimmingclub.pl/rezerwacje.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Sunday Swimming Club">
+  <meta property="og:title" content="Rezerwacje: umów pierwsze zajęcia | Sunday Swimming Club">
+  <meta property="og:description" content="Zapisz się na pierwsze zajęcia pływackie w Poznaniu: grupowe, solo lub w parze. Wybierz pływalnię i termin, trener potwierdza każde zgłoszenie.">
+  <meta property="og:url" content="https://sundayswimmingclub.pl/rezerwacje.html">
+  <meta property="og:image" content="https://sundayswimmingclub.pl/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2ec5b6">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=DM+Mono:wght@400;500&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styl.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="pomin" href="#tresc">Przejdź do treści</a>
+  <header class="gora">
+    <div class="kontener">
+      <a class="logo" href="index.html"><img src="img/logo-czarne.webp" width="400" height="330" alt="Sunday Swimming Club, strona główna"></a>
+      <button class="menu-przycisk" type="button" aria-expanded="false" aria-controls="menu"><span class="kreski" aria-hidden="true"></span><span class="menu-tekst">Menu</span></button>
+      <nav id="menu" class="menu" aria-label="Menu główne">
+        <a href="klub.html">Klub</a>
+        <a href="oferta.html">Oferta</a>
+        <a href="cennik.html">Cennik</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="faq.html">FAQ</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a class="rez" href="rezerwacje.html" aria-current="page">Rezerwacje</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="tresc">
+    <section class="strona-gora">
+      <div class="kontener">
+        <p class="etykieta">Rezerwacje</p>
+        <h1>Umów pierwsze zajęcia</h1>
+        <p>Wybierz formę zajęć i uzupełnij dane. Przy zajęciach grupowych zaznacz termin w kalendarzu. Trener potwierdza każde zgłoszenie ręcznie.</p>
+      </div>
+    </section>
+    <section class="sekcja sekcja--bez-ramki">
+      <div class="kontener">
+      <div class="zapisy" data-zapisy data-url-tryb>
+        <div>
+          
+          <div class="przelacznik przelacznik--tryb" role="group" aria-label="Rodzaj zajęć">
+            <button type="button" data-tryb="indywidualne" aria-pressed="true">Indywidualne: solo / para</button>
+            <button type="button" data-tryb="grupowe" aria-pressed="false">Grupowe</button>
+          </div>
+
+          <div data-panel="indywidualne">
+            <form class="formularz" data-formularz data-typ="indywidualne" data-nazwa="Zapis na zajęcia indywidualne" data-temat="Zapis: zajęcia indywidualne" novalidate>
+              <div class="segment" role="radiogroup" aria-label="Solo czy w parze">
+                <label><input type="radio" name="forma" value="solo" checked><span>Solo</span></label>
+                <label><input type="radio" name="forma" value="para"><span>W parze</span></label>
+              </div>
+              <div class="dwa"><div class="pole"><label for="r-i-imie"><small>Imię</small><input id="r-i-imie" name="imie" required autocomplete="given-name" data-blad="Podaj imię." type="text"></label><p class="pole-blad" id="r-i-imie-blad"></p></div><div class="pole"><label for="r-i-nazwisko"><small>Nazwisko</small><input id="r-i-nazwisko" name="nazwisko" required autocomplete="family-name" data-blad="Podaj nazwisko." type="text"></label><p class="pole-blad" id="r-i-nazwisko-blad"></p></div></div>
+              <div class="dwa"><div class="pole"><label for="r-i-email"><small>E-mail</small><input id="r-i-email" name="email" required autocomplete="email" data-blad="Podaj poprawny adres e-mail." type="email" inputmode="email"></label><p class="pole-blad" id="r-i-email-blad"></p></div><div class="pole"><label for="r-i-tel"><small>Telefon</small><input id="r-i-tel" name="telefon" required autocomplete="tel" data-blad="Podaj numer telefonu (min. 9 cyfr)." type="tel" inputmode="tel"></label><p class="pole-blad" id="r-i-tel-blad"></p></div></div>
+              <div class="pole"><label for="r-i-basen"><small>Preferowany basen</small><select id="r-i-basen" name="basen" required data-blad="Wybierz basen."><option value="">Wybierz basen</option><option>POSiR Grunwald</option><option>POSiR Winogrady</option><option>POSiR Rataje</option><option>POSiR Chwiałka</option></select></label><p class="pole-blad" id="r-i-basen-blad"></p></div>
+              <div class="pole-puste" aria-hidden="true"><label>Nie wypełniaj tego pola <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+              <p class="formularz-info">Wysyłając formularz, zgadzasz się, że odezwiemy się w sprawie zajęć. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</p>
+              <div class="komunikat" role="alert"></div>
+              <button class="przycisk" type="submit">Wyślij zgłoszenie</button>
+            </form>
+            <div class="sukces" tabindex="-1" role="status"><img src="img/czepek-turkusowy.webp" width="90" height="77" alt=""><h3>Zgłoszenie przyjęte</h3><p data-opis>Trener potwierdzi zgłoszenie mailowo lub telefonicznie.</p></div>
+          </div>
+
+          <div data-panel="grupowe" hidden>
+            <form class="formularz" data-formularz data-typ="grupowe" data-nazwa="Zapis na zajęcia grupowe" data-temat="Zapis: zajęcia grupowe" novalidate>
+              <div class="dwa"><div class="pole"><label for="r-g-imie"><small>Imię</small><input id="r-g-imie" name="imie" required autocomplete="given-name" data-blad="Podaj imię." type="text"></label><p class="pole-blad" id="r-g-imie-blad"></p></div><div class="pole"><label for="r-g-nazwisko"><small>Nazwisko</small><input id="r-g-nazwisko" name="nazwisko" required autocomplete="family-name" data-blad="Podaj nazwisko." type="text"></label><p class="pole-blad" id="r-g-nazwisko-blad"></p></div></div>
+              <div class="dwa"><div class="pole"><label for="r-g-email"><small>E-mail</small><input id="r-g-email" name="email" required autocomplete="email" data-blad="Podaj poprawny adres e-mail." type="email" inputmode="email"></label><p class="pole-blad" id="r-g-email-blad"></p></div><div class="pole"><label for="r-g-tel"><small>Telefon</small><input id="r-g-tel" name="telefon" required autocomplete="tel" data-blad="Podaj numer telefonu (min. 9 cyfr)." type="tel" inputmode="tel"></label><p class="pole-blad" id="r-g-tel-blad"></p></div></div>
+              <div class="pole"><label for="r-g-basen"><small>Preferowany basen</small><select id="r-g-basen" name="basen" required data-blad="Wybierz basen."><option value="">Wybierz basen</option><option>POSiR Grunwald</option><option>POSiR Winogrady</option><option>POSiR Rataje</option><option>POSiR Chwiałka</option></select></label><p class="pole-blad" id="r-g-basen-blad"></p></div>
+              <div class="pole-puste" aria-hidden="true"><label>Nie wypełniaj tego pola <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+              <p class="formularz-info">Wysyłając formularz, zgadzasz się, że odezwiemy się w sprawie zajęć. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</p>
+              <div class="komunikat" role="alert"></div>
+              <button class="przycisk" type="submit">Wyślij zgłoszenie</button>
+            </form>
+            <div class="sukces" tabindex="-1" role="status"><img src="img/czepek-turkusowy.webp" width="90" height="77" alt=""><h3>Zgłoszenie przyjęte</h3><p data-opis>Odezwiemy się w sprawie próbnego treningu i wolnych miejsc na torze.</p></div>
+          </div>
+          <p class="cena-info" data-cena></p>
+        </div>
+        <div>
+          <div data-dla="grupowe" hidden>
+            <!-- TODO (klient): rzeczywiste wolne tory. Kalendarze grup dodaje się w js/config.js (calcom.grupowe), wtedy tabela przykładowa poniżej znika -->
+            <div data-cal="grupowe">
+              <p class="etykieta" style="margin-bottom:10px">Dostępność na pływalniach · przykładowe dane</p>
+              <table class="plywalnie plywalnie--rezerwacje">
+                <thead><tr><th>Pływalnia</th><th>Miejsca na torze</th></tr></thead>
+                <tbody><tr><td>Grunwald</td><td><div class="miejsca"><span class="miernik" data-n="10" data-t="6" data-obraz="img/czepek-turkusowy-s.webp"></span><span class="wolne">4 wolne</span></div></td></tr><tr><td>Winogrady</td><td><div class="miejsca"><span class="miernik" data-n="10" data-t="10" data-obraz="img/czepek-turkusowy-s.webp"></span><span class="lista-rezerwowa">lista rezerwowa</span></div></td></tr><tr><td>Rataje</td><td><div class="miejsca"><span class="miernik" data-n="10" data-t="3" data-obraz="img/czepek-turkusowy-s.webp"></span><span class="wolne">7 wolnych</span></div></td></tr><tr><td>Chwiałka</td><td><div class="miejsca"><span class="miernik" data-n="10" data-t="8" data-obraz="img/czepek-turkusowy-s.webp"></span><span class="wolne">2 wolne</span></div></td></tr></tbody>
+              </table>
+            </div>
+            <p class="uwaga">Próbny trening grupowy kosztuje 100 zł. Limit to 10 osób na tor, kolejne zgłoszenia trafiają na listę rezerwową.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="stopka">
+    <div class="kontener">
+      <div class="stopka-kolumny">
+        <div class="stopka-logo"><a href="index.html"><img src="img/logo-czarne.webp" width="400" height="330" alt="Sunday Swimming Club" loading="lazy"></a></div>
+        <div><h2>Kontakt</h2><ul><li><a href="mailto:sundayswimmingclubpoznan@gmail.com">sundayswimmingclubpoznan@gmail.com</a></li><li><a href="tel:+48501066121">501 066 121</a></li></ul></div>
+        <div><h2>Klub</h2><ul><li><a data-instagram>Instagram</a></li><li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li><li><a href="regulamin.html">Regulamin</a></li><li><button type="button" class="link-przycisk" data-cookies>Ustawienia cookies</button></li></ul></div>
+      </div>
+      <div class="partner"><span>Partner klubu</span><img src="img/partner-plc-bialy.webp" width="240" height="205" alt="PLC Doradztwo Informatyczne" loading="lazy"></div>
+      <p class="stopka-prawa">© Sunday Swimming Club, Poznań</p>
+    </div>
+  </footer>
+  <script src="js/config.js"></script>
+  <script src="js/cookies.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

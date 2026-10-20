@@ -1,0 +1,5 @@
+# Domena: sundayswimmingclub.pl
+User-agent: *
+Allow: /
+
+Sitemap: https://sundayswimmingclub.pl/sitemap.xml
