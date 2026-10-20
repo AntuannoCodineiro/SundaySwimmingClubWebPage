@@ -16,7 +16,6 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 
 ## 2. Treści i dane od klienta
 
-- [ ] **Wolne tory.** Podgląd dostępności na pływalniach w zakładce „Grupowe” (miejsca na torze, lista rezerwowa) to dane przykładowe. Znika, gdy w `js/config.js` jest lista grup z Cal.com. Dni zajęć przy basenach zostały ze strony usunięte.
 - [ ] **Widżet Instagrama.** Adres profilu jest wpisany (`instagram.url` w `js/config.js`). Brakuje identyfikatora widżetu z LightWidget (`instagram.lightwidgetId`), do tego czasu pokazuje się podgląd ze zdjęć.
 - [ ] **Zdjęcie hero.** Zdjęcie zgodne z konceptem (podwodne, pełny kadr). Na razie jest `IMG_4040`.
 - [ ] **Czarny czepek.** Jest wariantem wygenerowanym, klub go jeszcze nie ma. Użyty w sekcji o grupach, na kartach planów i w sekcji zamykającej na stronie głównej.
@@ -25,13 +24,12 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 - [ ] **Zdjęcia do galerii.** Na Dysku nie ma więcej nowych zdjęć niż `IMG_3514`. Dosłać kolejne, jeśli mają wejść do galerii.
 - [ ] **Treść „Gdzie pływamy”.** Zatwierdzić, czy na stronie głównej zostaje lista dni przy pływalniach.
 
-## 3. Rezerwacje (Cal.com)
+## 3. Rezerwacje i harmonogram
 
-- [ ] **Adres wydarzenia.** Klient wybrał jeden kalendarz: podać link do wydarzenia (np. `https://cal.com/sundayswimmingclub/pierwsze-zajecia`) i wpisać go w `js/config.js` (`calcom.adres`). Teraz wpisany jest profil, który pokazuje listę wydarzeń zamiast kalendarza.
-- [ ] **Ustawienia wydarzenia w Cal.com.** Dostępność, ręczne potwierdzanie (`Requires confirmation`), 10 miejsc na termin (`Offer seats`), powiadomienia na adres klubu, nazwy po polsku.
-- [ ] **Podwójne zgłoszenie.** Zdecydować, co z formularzem zapisu obok kalendarza: zostaje jako zgłoszenie z mailem, czy jest usuwany dla trybu indywidualnego, żeby rezerwacja szła tylko przez Cal.com.
-- [ ] **Lista rezerwowa.** Ustalić, jak jest prowadzona i czy strona ma o niej mówić (na razie tekst i mierniki z przykładowymi danymi).
-- [ ] **Wysokość widgetu.** Jeśli wydarzeń będzie dużo, zwiększyć wysokość ramki (`.cal-ramka iframe` w `css/styl.css`).
+- [ ] **Harmonogram grup.** Strona rezerwacji pokazuje grupy MiddleMan, MiddleMan+ i PRO (Grunwald, Chwiałka, Rataje) według informacji od klienta. Potwierdzić godziny, nazwy grup i czy jest jeszcze grupa dla początkujących.
+- [ ] **Zmiany harmonogramu.** Godziny są wpisane w `rezerwacje.html` (sekcja „Harmonogram zajęć grupowych”). Ustalić, kto i jak je zmienia.
+- [ ] **Kalendarz Cal.com.** Odłożony. Wrócić do tematu, gdy klub będzie gotowy na rezerwacje online (wcześniejszy kod i ustawienia są w historii gita).
+- [ ] **Lista rezerwowa.** Ustalić, jak jest prowadzona (strona mówi: limit 10 osób na tor, kolejne zgłoszenia na listę rezerwową).
 
 ## 4. Dopracowanie wyglądu i treści
 

@@ -33,17 +33,6 @@
     else if (szeroki.addListener) szeroki.addListener(reset);
   }
 
-  /* ---------- mierniki miejsc (czepek = miejsce na torze) ---------- */
-  document.querySelectorAll('.miernik').forEach(function (m) {
-    var n = +m.dataset.n, t = +m.dataset.t, html = '';
-    for (var i = 0; i < n; i++) {
-      html += '<img src="' + m.dataset.obraz + '" alt=""' + (i >= t ? ' class="zajete"' : '') + ' width="26" height="22">';
-    }
-    m.innerHTML = html;
-    m.setAttribute('role', 'img');
-    m.setAttribute('aria-label', 'Zajęte miejsca: ' + t + ' z ' + n);
-  });
-
   /* ---------- adres profilu na Instagramie ---------- */
   var igUrl = CONF.instagram && CONF.instagram.url;
   document.querySelectorAll('[data-instagram]').forEach(function (a) {
@@ -60,7 +49,7 @@
     }
   });
 
-  /* ---------- treści zewnętrzne (LightWidget, Cal.com) tylko po zgodzie ---------- */
+  /* ---------- treści zewnętrzne (LightWidget) tylko po zgodzie ---------- */
   var zgody = window.SSC_ZGODY || { stan: function () { return { zewnetrzne: false }; }, zezwolZewnetrzne: function () {} };
   var odswiezanie = [];
   var bylaZgoda = zgody.stan().zewnetrzne;
@@ -71,8 +60,6 @@
     bylaZgoda = jest;
     odswiezanie.forEach(function (f) { f(jest); });
   });
-
-  var POLITYKA = '<a href="polityka-prywatnosci.html#cookies">Szczegóły w polityce prywatności</a>';
 
   /* widżet LightWidget */
   var lwId = CONF.instagram && CONF.instagram.lightwidgetId;
@@ -96,50 +83,6 @@
       document.body.appendChild(s);
     });
   }
-
-  /* kalendarz Cal.com */
-  function calSrc(adres) {
-    return adres + (adres.indexOf('?') > -1 ? '&' : '?') + 'embed=true&layout=month_view';
-  }
-
-  document.querySelectorAll('[data-cal]').forEach(function (box) {
-    var konf = (CONF.calcom || {})[box.dataset.cal];
-    var lista = !konf ? [] : (typeof konf === 'string' ? [{ nazwa: '', adres: konf }] : konf);
-    lista = lista.filter(function (w) { return w && w.adres; });
-    if (!lista.length) return;
-
-    var etykieta = '<p class="etykieta" style="margin-bottom:10px">Kalendarz zajęć</p>';
-
-    function monit() {
-      box.innerHTML = etykieta + '<div class="zgoda-tresci"><p>Kalendarz rezerwacji działa przez Cal.com, zewnętrzną usługę, która może zapisywać własne pliki cookies. Włącz treści zewnętrzne, żeby go zobaczyć.</p>' +
-        '<button class="przycisk" type="button">Pokaż kalendarz</button><p class="uwaga">' + POLITYKA + '</p></div>';
-      box.querySelector('button').addEventListener('click', function () { zgody.zezwolZewnetrzne(); });
-    }
-
-    function kalendarz() {
-      var html = etykieta;
-      if (lista.length > 1) {
-        html += '<div class="przelacznik" role="group" aria-label="Wybór grupy">' + lista.map(function (w, i) {
-          return '<button type="button" data-i="' + i + '" aria-pressed="' + (i === 0) + '">' + w.nazwa + '</button>';
-        }).join('') + '</div>';
-      }
-      html += '<div class="cal-ramka"></div>';
-      box.innerHTML = html;
-
-      var ramka = box.querySelector('.cal-ramka');
-      function pokaz(i) {
-        var w = lista[i];
-        ramka.innerHTML = '<iframe src="' + calSrc(w.adres) + '" title="Kalendarz zajęć' + (w.nazwa ? ': ' + w.nazwa : '') + '" loading="lazy"></iframe>';
-        box.querySelectorAll('.przelacznik button').forEach(function (b) { b.setAttribute('aria-pressed', String(+b.dataset.i === i)); });
-      }
-      box.querySelectorAll('.przelacznik button').forEach(function (b) {
-        b.addEventListener('click', function () { pokaz(+b.dataset.i); });
-      });
-      pokaz(0);
-    }
-
-    odswiezanie.push(function (jest) { if (jest) kalendarz(); else monit(); });
-  });
 
   odswiezanie.forEach(function (f) { f(bylaZgoda); });
 

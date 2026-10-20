@@ -15,7 +15,7 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 - **Podstrony (osobne pliki):** `index.html` (start), `klub.html`, `oferta.html`, `cennik.html`, `galeria.html`, `faq.html`, `kontakt.html`, `rezerwacje.html`, plus `polityka-prywatnosci.html` i `regulamin.html`.
 - **Język:** tylko polski.
 - **Formularze:** wysyłka przez Web3Forms lub Formspree na `sundayswimmingclubpoznan@gmail.com`. Klucz/endpoint to placeholder w jednym miejscu w konfiguracji, nie wpisuj prawdziwego klucza do repozytorium.
-- **Rezerwacje:** darmowy widget Cal.com (osadzony), ręczna akceptacja przez trenerów, limit 10 osób na tor, lista rezerwowa prowadzona ręcznie, jedno wspólne konto klubu.
+- **Rezerwacje:** na razie bez kalendarza Cal.com (odłożone na później). Strona pokazuje harmonogram zajęć grupowych, a zapisy idą przez formularz albo kontakt bezpośredni. Ręczna akceptacja przez trenerów, limit 10 osób na tor, lista rezerwowa prowadzona ręcznie.
 - **Instagram zamiast bloga:** widget LightWidget (placeholder do czasu podania konta).
 - **Hero:** zdjęcie, nie wideo.
 - **SEO:** podstawy (tytuły, opisy, nagłówki, alt, Open Graph, `sitemap.xml`, `robots.txt`, dane strukturalne `SportsClub`/`LocalBusiness`).
@@ -38,8 +38,8 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 
 ## Do uzupełnienia przez klienta (nie zgaduj, oznacz w kodzie jako TODO)
 
-- Godziny zajęć i wolne tory na pływalniach (w prototypie dane przykładowe).
-- Konto na Instagramie, klucz LightWidget, adres rezerwacji Cal.com.
+- Potwierdzenie harmonogramu zajęć grupowych (podany przez klienta, wpisany na stronie rezerwacji).
+- Klucz LightWidget (adres profilu na Instagramie jest już wpisany).
 - Adres domeny i hostingu.
 - Zdjęcie hero zgodne z konceptem (podwodne, pełny kadr). Na razie IMG_4040.
 - Zgody osób widocznych na zdjęciach, polityka prywatności i regulamin.
