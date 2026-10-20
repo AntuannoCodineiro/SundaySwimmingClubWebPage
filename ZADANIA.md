@@ -4,10 +4,11 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 
 ## 1. Blokuje publikację
 
-- [ ] **Wdrożenie na GitHub Pages.** Domena `sundayswimmingclub.pl` jest wpisana w stronie, `sitemap.xml`, `robots.txt` i `CNAME`. W repo włączyć Pages (Settings → Pages → Deploy from a branch → `main` / root), ustawić rekordy DNS u rejestratora, w Pages wpisać domenę i włączyć „Enforce HTTPS”. Materiały klienta zostają poza repo (`.gitignore`).
+- [x] **Domena i hosting.** Domena `sundayswimmingclub.pl` działa na GitHub Pages (repo `SundaySwimmingClubWebPage`, DNS u SEOhost, HTTPS włączony). Materiały klienta zostają poza repo (`.gitignore`).
 - [ ] **Wysyłka formularzy.** Założyć klucz Web3Forms (albo konto Formspree) dla `sundayswimmingclubpoznan@gmail.com` i wpisać go w `js/config.js` (`formularze.klucz`, ewentualnie `endpoint`). Bez tego formularze pokazują komunikat błędu z adresem e-mail klubu.
 - [ ] **Test wysyłki na prawdziwym kluczu.** Wysłać po jednym zgłoszeniu z każdego z trzech formularzy (indywidualny, grupowy, kontaktowy) i sprawdzić, czy mail dochodzi z poprawnym tematem i polami.
-- [ ] **Polityka prywatności.** Wersja robocza jest napisana (administrator, cele, odbiorcy, prawa, cookies z tabelą). Uzupełnić pola TODO (ustalenie administratora danych w stowarzyszeniu zwykłym, dostawca formularzy i hostingu, okresy przechowywania, zgody na wizerunek), przejrzeć z prawnikiem, usunąć `noindex` i dopisać do `sitemap.xml`.
+- [x] **Reprezentacja stowarzyszenia.** Stowarzyszenie reprezentują Kacper Matysiak i Albert Warzocha.
+- [ ] **Polityka prywatności.** Wersja robocza jest napisana (administrator, cele, odbiorcy, prawa, cookies z tabelą). Uzupełnić pola TODO (potwierdzenie z prawnikiem, kto jest administratorem danych w stowarzyszeniu zwykłym, dostawca formularzy i hostingu, okresy przechowywania, zgody na wizerunek), przejrzeć z prawnikiem, usunąć `noindex` i dopisać do `sitemap.xml`.
 - [ ] **Regulamin.** Uzupełnić `regulamin.html` (płatności, ważność pakietów, odwoływanie zajęć, zdrowie i bezpieczeństwo, reklamacje). Usunąć `noindex`, dodać do `sitemap.xml`.
 - [ ] **Zgody na wizerunek.** Zebrać zgody osób widocznych na zdjęciach (galeria, oferta, klub). Nowa osoba na zdjęciu z odkrytego basenu (`IMG_3514`).
 - [ ] **Google Analytics.** Wpisać identyfikator pomiaru GA4 w `js/config.js` (`analityka.gaId`, np. `G-XXXXXXXXXX`). Skrypt ładuje się dopiero po zgodzie w banerze cookies. Ustawić w GA retencję danych zgodnie z polityką prywatności.
@@ -38,7 +39,7 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 - [ ] **Kroki „Twoja droga”.** Zatwierdzić teksty z prototypu (są roboczymi propozycjami).
 - [ ] **Teksty z prototypu.** Przejrzeć nagłówki i opisy ofert. Treści FAQ, kadry i opisu klubu są od klienta i zostają bez zmian.
 - [ ] **Logo i ikony.** Sprawdzić favicon i grafikę udostępniania (`img/og.jpg`) po ustaleniu domeny, np. w podglądzie linku na Facebooku.
-- [ ] **Analityka.** Zdecydować, czy klub potrzebuje statystyk odwiedzin (nie ma w zakresie, wymagałoby zgody na cookies).
+- [x] **Analityka.** Zdecydowano: Google Analytics po zgodzie w banerze cookies (zostaje wpisać identyfikator, patrz wyżej).
 
 ## 5. Techniczne przed startem
 
@@ -47,5 +48,5 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 - [ ] **Wydajność.** Zmierzyć Lighthouse na wdrożonej stronie (szczególnie hero i galeria).
 - [ ] **SEO.** Zgłosić `sitemap.xml` w Google Search Console, sprawdzić dane strukturalne (SportsClub, FAQPage) w teście wyników rozszerzonych, uzupełnić adres, godziny i `sameAs`.
 - [ ] **Nagłówek i stopka.** Są powtórzone w 10 plikach HTML. Każda zmiana menu lub stopki wymaga poprawki we wszystkich.
-- [ ] **Kopia zapasowa i repozytorium.** Zrobić pierwszy commit, wybrać hosting i sposób wdrożenia.
-- [ ] **Po wdrożeniu.** Wysłać testowe zgłoszenie z produkcji, sprawdzić certyfikat HTTPS, przekierowanie `www`, stronę 404.
+- [x] **Repozytorium.** Kod jest w `AntuannoCodineiro/SundaySwimmingClubWebPage` na GitHubie (czysta historia, bez materiałów klienta).
+- [ ] **Po wdrożeniu.** Wysłać testowe zgłoszenie z produkcji (po wpisaniu klucza Web3Forms). Strona 404 jest gotowa. Certyfikat HTTPS i domena działają.
