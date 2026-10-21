@@ -12,11 +12,11 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 ## Decyzje
 
 - **Technologia:** czysty HTML, CSS i JS, bez frameworka i bez kroku budowania. Wspólne elementy (menu, stopka) trzeba powtórzyć na każdej stronie, więc trzymaj je w jednym wzorcu i kopiuj świadomie. Można dodać mały skrypt wstawiający menu i stopkę, jeśli to uprości pracę, ale strona ma działać po otwarciu plików z dysku i na zwykłym hostingu statycznym.
-- **Podstrony (osobne pliki):** `index.html` (start), `klub.html`, `oferta.html`, `cennik.html`, `galeria.html`, `faq.html`, `kontakt.html`, `rezerwacje.html`, plus `polityka-prywatnosci.html` i `regulamin.html`.
+- **Podstrony (osobne pliki):** `index.html` (start), `klub.html`, `oferta.html`, `cennik.html`, `galeria.html`, `faq.html`, `kontakt.html`, `rezerwacje.html`, plus `polityka-prywatnosci.html`. Regulamin zajęć nie jest publikowany na stronie (dostępny na zajęciach).
 - **Język:** tylko polski.
 - **Formularze:** wysyłka przez Web3Forms lub Formspree na `sundayswimmingclubpoznan@gmail.com`. Klucz/endpoint są w jednym miejscu w konfiguracji (`js/config.js`). Klucz Web3Forms jest publiczny z założenia (strona statyczna), więc jest wpisany w repozytorium. Nie wpisuj tam żadnych tajnych kluczy.
 - **Rezerwacje:** na razie bez kalendarza Cal.com (odłożone na później). Strona pokazuje harmonogram zajęć grupowych, a zapisy idą przez formularz albo kontakt bezpośredni. Ręczna akceptacja przez trenerów, limit 8 osób w grupie plus 2 miejsca rezerwowe, lista rezerwowa prowadzona ręcznie.
-- **Instagram zamiast bloga:** widget LightWidget (placeholder do czasu podania konta).
+- **Instagram zamiast bloga:** autorski widżet (zamiast LightWidget), do czasu potwierdzenia dostępu do konta od klienta jest podgląd ze zdjęć.
 - **Hero:** zdjęcie, nie wideo.
 - **SEO:** podstawy (tytuły, opisy, nagłówki, alt, Open Graph, `sitemap.xml`, `robots.txt`, dane strukturalne `SportsClub`/`LocalBusiness`).
 
@@ -39,10 +39,10 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 ## Do uzupełnienia przez klienta (nie zgaduj, oznacz w kodzie jako TODO)
 
 - Potwierdzenie harmonogramu zajęć grupowych (podany przez klienta, wpisany na stronie rezerwacji).
-- Klucz LightWidget (adres profilu na Instagramie jest już wpisany).
+- Potwierdzenie dostępu do konta na Instagramie dla autorskiego widżetu (adres profilu jest już wpisany).
 - Adres domeny i hostingu.
 - Zdjęcie hero zgodne z konceptem (podwodne, pełny kadr). Na razie IMG_4040.
-- Zgody osób widocznych na zdjęciach, polityka prywatności i regulamin.
+- Zgody osób widocznych na zdjęciach i polityka prywatności.
 - Czarny czepek jest wariantem wygenerowanym, klub go jeszcze nie ma.
 
 ## Wymagania jakości
