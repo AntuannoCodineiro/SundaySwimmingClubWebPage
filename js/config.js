@@ -13,9 +13,9 @@ window.SSC_CONFIG = {
     emailKlubu: 'sundayswimmingclubpoznan@gmail.com'
   },
   analityka: {
-    /* TODO (klient): identyfikator pomiaru Google Analytics 4, np. 'G-XXXXXXXXXX'.
-       Skrypt Google ładuje się dopiero po zgodzie na statystyki w banerze cookies. */
-    gaId: ''
+    /* Identyfikator pomiaru Google Analytics 4. Skrypt Google ładuje się dopiero po zgodzie
+       na statystyki w banerze cookies. */
+    gaId: 'G-YWJBJ44WZN'
   },
   instagram: {
     url: 'https://www.instagram.com/sunday_swimming_club/',

@@ -11,7 +11,8 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 - [ ] **Polityka prywatności.** Wersja robocza jest napisana (administrator, cele, odbiorcy, prawa, cookies z tabelą). Uzupełnić pola TODO (potwierdzenie z prawnikiem, kto jest administratorem danych w stowarzyszeniu zwykłym, dostawca formularzy i hostingu, okresy przechowywania, zgody na wizerunek), przejrzeć z prawnikiem, usunąć `noindex` i dopisać do `sitemap.xml`.
 - [ ] **Regulamin.** Uzupełnić `regulamin.html` (płatności, ważność pakietów, odwoływanie zajęć, zdrowie i bezpieczeństwo, reklamacje). Usunąć `noindex`, dodać do `sitemap.xml`.
 - [ ] **Zgody na wizerunek.** Zebrać zgody osób widocznych na zdjęciach (galeria, oferta, klub). Nowa osoba na zdjęciu z odkrytego basenu (`IMG_3514`).
-- [ ] **Google Analytics.** Wpisać identyfikator pomiaru GA4 w `js/config.js` (`analityka.gaId`, np. `G-XXXXXXXXXX`). Skrypt ładuje się dopiero po zgodzie w banerze cookies. Ustawić w GA retencję danych zgodnie z polityką prywatności.
+- [x] **Google Analytics.** Identyfikator pomiaru `G-YWJBJ44WZN` jest wpisany w `js/config.js`. Skrypt ładuje się po zgodzie w banerze cookies.
+- [ ] **Ustawienia Google Analytics.** Ustawić retencję danych na 14 miesięcy (Administracja → Zbieranie danych → Przechowywanie danych) i przetestować w Raporty → Czas rzeczywisty po zaakceptowaniu cookies na stronie.
 - [ ] **Czcionki Google Fonts.** Ładują się z serwerów Google bez zgody (przeglądarka przekazuje adres IP). Zdecydować, czy hostujemy je u siebie, żeby uniknąć tej kwestii.
 - [ ] **Baner cookies.** Przetestować na prawdziwej domenie i sprawdzić listę cookies w przeglądarce po zgodzie, uzupełnić tabelę w polityce prywatności.
 
