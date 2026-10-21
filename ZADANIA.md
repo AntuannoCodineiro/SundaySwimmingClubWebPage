@@ -16,7 +16,8 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 - ✅ **Regulamin zajęć.** Nie jest publikowany na stronie, dostępny jest na zajęciach. Strona regulaminu i link w stopce usunięte.
 - ⬜ **Zgody na wizerunek.** Zebrać zgody osób widocznych na zdjęciach (galeria, oferta, klub). Nowa osoba na zdjęciu z odkrytego basenu (`IMG_3514`). Czekamy na informację od klienta.
 - ✅ **Google Analytics.** Identyfikator pomiaru `G-YWJBJ44WZN` jest wpisany w `js/config.js`. Skrypt ładuje się po zgodzie w banerze cookies.
-- ⬜ **Ustawienia Google Analytics.** Ustawić retencję danych na 14 miesięcy (Administracja → Zbieranie danych → Przechowywanie danych) i przetestować w Raporty → Czas rzeczywisty po zaakceptowaniu cookies na stronie.
+- ✅ **Przechowywanie danych w Google Analytics.** Ustawione na 14 miesięcy (zgodnie z polityką prywatności).
+- ⬜ **Test Google Analytics.** Zaakceptować cookies na stronie produkcyjnej i sprawdzić w Raporty → Czas rzeczywisty, czy wizyta się pojawia.
 - ⬜ **Czcionki Google Fonts.** Ładują się z serwerów Google bez zgody (przeglądarka przekazuje adres IP). Zdecydować, czy hostujemy je u siebie, żeby uniknąć tej kwestii.
 - ⬜ **Baner cookies.** Przetestować na prawdziwej domenie i sprawdzić listę cookies w przeglądarce po zgodzie, uzupełnić tabelę w polityce prywatności.
 
