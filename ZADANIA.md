@@ -7,8 +7,9 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 - [x] **Domena i hosting.** Domena `sundayswimmingclub.pl` działa na GitHub Pages (repo `SundaySwimmingClubWebPage`, DNS u SEOhost, HTTPS włączony). Materiały klienta zostają poza repo (`.gitignore`).
 - [x] **Wysyłka formularzy.** Klucz Web3Forms jest wpisany w `js/config.js`.
 - [ ] **Test wysyłki na prawdziwym kluczu.** Wysłać po jednym zgłoszeniu z każdego z trzech formularzy (indywidualny, grupowy, kontaktowy) i sprawdzić, czy mail dochodzi z poprawnym tematem i polami.
-- [x] **Reprezentacja stowarzyszenia.** Stowarzyszenie reprezentują Kacper Matysiak i Albert Warzocha.
-- [ ] **Polityka prywatności.** Wersja robocza jest napisana (administrator, cele, odbiorcy, prawa, cookies z tabelą). Uzupełnić pola TODO (potwierdzenie z prawnikiem, kto jest administratorem danych w stowarzyszeniu zwykłym, dostawca formularzy i hostingu, okresy przechowywania, zgody na wizerunek), przejrzeć z prawnikiem, usunąć `noindex` i dopisać do `sitemap.xml`.
+- [x] **Reprezentacja stowarzyszenia.** Stowarzyszenie reprezentuje Kacper Matysiak.
+- [ ] **Regulamin działalności stowarzyszenia zwykłego.** Zapytać Kacpra, czy klub ma regulamin działalności (stowarzyszenie zwykłe zwykle go ma, składa się go przy wpisie do ewidencji) i czy forma prawna pozwala pobierać opłaty za zajęcia. Potwierdzić z księgowym lub prawnikiem.
+- [ ] **Polityka prywatności.** Wersja robocza jest napisana (administrator, cele, odbiorcy, prawa, cookies z tabelą). Uzupełnić pola TODO (dostawca formularzy i hostingu, okresy przechowywania, zgody na wizerunek), przejrzeć z prawnikiem, usunąć `noindex` i dopisać do `sitemap.xml`.
 - [ ] **Regulamin.** Uzupełnić `regulamin.html` (płatności, ważność pakietów, odwoływanie zajęć, zdrowie i bezpieczeństwo, reklamacje). Usunąć `noindex`, dodać do `sitemap.xml`.
 - [ ] **Zgody na wizerunek.** Zebrać zgody osób widocznych na zdjęciach (galeria, oferta, klub). Nowa osoba na zdjęciu z odkrytego basenu (`IMG_3514`).
 - [x] **Google Analytics.** Identyfikator pomiaru `G-YWJBJ44WZN` jest wpisany w `js/config.js`. Skrypt ładuje się po zgodzie w banerze cookies.
