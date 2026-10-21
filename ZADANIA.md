@@ -5,7 +5,7 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 ## 1. Blokuje publikację
 
 - [x] **Domena i hosting.** Domena `sundayswimmingclub.pl` działa na GitHub Pages (repo `SundaySwimmingClubWebPage`, DNS u SEOhost, HTTPS włączony). Materiały klienta zostają poza repo (`.gitignore`).
-- [ ] **Wysyłka formularzy.** Założyć klucz Web3Forms (albo konto Formspree) dla `sundayswimmingclubpoznan@gmail.com` i wpisać go w `js/config.js` (`formularze.klucz`, ewentualnie `endpoint`). Bez tego formularze pokazują komunikat błędu z adresem e-mail klubu.
+- [x] **Wysyłka formularzy.** Klucz Web3Forms jest wpisany w `js/config.js`.
 - [ ] **Test wysyłki na prawdziwym kluczu.** Wysłać po jednym zgłoszeniu z każdego z trzech formularzy (indywidualny, grupowy, kontaktowy) i sprawdzić, czy mail dochodzi z poprawnym tematem i polami.
 - [x] **Reprezentacja stowarzyszenia.** Stowarzyszenie reprezentują Kacper Matysiak i Albert Warzocha.
 - [ ] **Polityka prywatności.** Wersja robocza jest napisana (administrator, cele, odbiorcy, prawa, cookies z tabelą). Uzupełnić pola TODO (potwierdzenie z prawnikiem, kto jest administratorem danych w stowarzyszeniu zwykłym, dostawca formularzy i hostingu, okresy przechowywania, zgody na wizerunek), przejrzeć z prawnikiem, usunąć `noindex` i dopisać do `sitemap.xml`.

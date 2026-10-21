@@ -1,6 +1,5 @@
 /* Konfiguracja strony. Tu, w jednym miejscu, wpisujemy klucze i adresy zewnętrznych usług.
-   Nie wpisuj tu prawdziwego klucza przed wdrożeniem w repozytorium, tylko na hostingu (klucz Web3Forms
-   i tak jest publiczny z założenia, ale nie trzymamy go w kodzie). */
+   Strona jest statyczna, więc wszystko tutaj jest publiczne. Nie wpisuj żadnych tajnych kluczy. */
 window.SSC_CONFIG = {
   formularze: {
     /* 'web3forms' albo 'formspree' */
@@ -8,9 +7,9 @@ window.SSC_CONFIG = {
     /* web3forms: https://api.web3forms.com/submit
        formspree: https://formspree.io/f/<ID_FORMULARZA> */
     endpoint: 'https://api.web3forms.com/submit',
-    /* TODO (klient): klucz dostępu Web3Forms wygenerowany dla sundayswimmingclubpoznan@gmail.com.
-       Przy Formspree zostaw pusty, ID jest w endpoincie. */
-    klucz: '',
+    /* Klucz dostępu Web3Forms dla sundayswimmingclubpoznan@gmail.com. Jest publiczny z założenia
+       (strona statyczna musi go zawierać w kodzie). Przy Formspree zostaw pusty, ID jest w endpoincie. */
+    klucz: '7846be8c-3fcc-4eba-b641-f9190c10f8fb',
     emailKlubu: 'sundayswimmingclubpoznan@gmail.com'
   },
   analityka: {

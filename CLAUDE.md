@@ -14,7 +14,7 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 - **Technologia:** czysty HTML, CSS i JS, bez frameworka i bez kroku budowania. Wspólne elementy (menu, stopka) trzeba powtórzyć na każdej stronie, więc trzymaj je w jednym wzorcu i kopiuj świadomie. Można dodać mały skrypt wstawiający menu i stopkę, jeśli to uprości pracę, ale strona ma działać po otwarciu plików z dysku i na zwykłym hostingu statycznym.
 - **Podstrony (osobne pliki):** `index.html` (start), `klub.html`, `oferta.html`, `cennik.html`, `galeria.html`, `faq.html`, `kontakt.html`, `rezerwacje.html`, plus `polityka-prywatnosci.html` i `regulamin.html`.
 - **Język:** tylko polski.
-- **Formularze:** wysyłka przez Web3Forms lub Formspree na `sundayswimmingclubpoznan@gmail.com`. Klucz/endpoint to placeholder w jednym miejscu w konfiguracji, nie wpisuj prawdziwego klucza do repozytorium.
+- **Formularze:** wysyłka przez Web3Forms lub Formspree na `sundayswimmingclubpoznan@gmail.com`. Klucz/endpoint są w jednym miejscu w konfiguracji (`js/config.js`). Klucz Web3Forms jest publiczny z założenia (strona statyczna), więc jest wpisany w repozytorium. Nie wpisuj tam żadnych tajnych kluczy.
 - **Rezerwacje:** na razie bez kalendarza Cal.com (odłożone na później). Strona pokazuje harmonogram zajęć grupowych, a zapisy idą przez formularz albo kontakt bezpośredni. Ręczna akceptacja przez trenerów, limit 8 osób w grupie plus 2 miejsca rezerwowe, lista rezerwowa prowadzona ręcznie.
 - **Instagram zamiast bloga:** widget LightWidget (placeholder do czasu podania konta).
 - **Hero:** zdjęcie, nie wideo.
