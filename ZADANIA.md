@@ -30,7 +30,7 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 - [ ] **Harmonogram grup.** Strona rezerwacji pokazuje grupy MiddleMan, MiddleMan+ i PRO (Grunwald, Chwiałka, Rataje) według informacji od klienta. Potwierdzić godziny, nazwy grup i czy jest jeszcze grupa dla początkujących.
 - [ ] **Zmiany harmonogramu.** Godziny są wpisane w `rezerwacje.html` (sekcja „Harmonogram zajęć grupowych”). Ustalić, kto i jak je zmienia.
 - [ ] **Kalendarz Cal.com.** Odłożony. Wrócić do tematu, gdy klub będzie gotowy na rezerwacje online (wcześniejszy kod i ustawienia są w historii gita).
-- [ ] **Lista rezerwowa.** Ustalić, jak jest prowadzona (strona mówi: limit 10 osób na tor, kolejne zgłoszenia na listę rezerwową).
+- [ ] **Lista rezerwowa.** Ustalić, jak jest prowadzona (strona mówi: 8 miejsc w grupie i 2 miejsca rezerwowe).
 
 ## 4. Dopracowanie wyglądu i treści
 

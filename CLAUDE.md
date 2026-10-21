@@ -15,7 +15,7 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 - **Podstrony (osobne pliki):** `index.html` (start), `klub.html`, `oferta.html`, `cennik.html`, `galeria.html`, `faq.html`, `kontakt.html`, `rezerwacje.html`, plus `polityka-prywatnosci.html` i `regulamin.html`.
 - **Język:** tylko polski.
 - **Formularze:** wysyłka przez Web3Forms lub Formspree na `sundayswimmingclubpoznan@gmail.com`. Klucz/endpoint to placeholder w jednym miejscu w konfiguracji, nie wpisuj prawdziwego klucza do repozytorium.
-- **Rezerwacje:** na razie bez kalendarza Cal.com (odłożone na później). Strona pokazuje harmonogram zajęć grupowych, a zapisy idą przez formularz albo kontakt bezpośredni. Ręczna akceptacja przez trenerów, limit 10 osób na tor, lista rezerwowa prowadzona ręcznie.
+- **Rezerwacje:** na razie bez kalendarza Cal.com (odłożone na później). Strona pokazuje harmonogram zajęć grupowych, a zapisy idą przez formularz albo kontakt bezpośredni. Ręczna akceptacja przez trenerów, limit 8 osób w grupie plus 2 miejsca rezerwowe, lista rezerwowa prowadzona ręcznie.
 - **Instagram zamiast bloga:** widget LightWidget (placeholder do czasu podania konta).
 - **Hero:** zdjęcie, nie wideo.
 - **SEO:** podstawy (tytuły, opisy, nagłówki, alt, Open Graph, `sitemap.xml`, `robots.txt`, dane strukturalne `SportsClub`/`LocalBusiness`).
@@ -24,7 +24,7 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 
 - Turkus `#2EC5B6`, róż `#FF5EA2`, czerń `#0B0B0B`, biel `#FFFFFF`. Czepki mają własne barwy marki (`#46A2A6`, `#CE6389`), zostają jak są.
 - Nagłówki: Unbounded. Tekst: Hanken Grotesk. Etykiety: DM Mono (Google Fonts).
-- Motywy: czepki wynurzające się zza falującej linii wody, czepek jako miernik 10 miejsc na torze. Kolor czepka nie oznacza poziomu grupy (decyzja klienta).
+- Motywy: czepki wynurzające się zza falującej linii wody, czepek jako miernik miejsc w grupie. Kolor czepka nie oznacza poziomu grupy (decyzja klienta).
 - Ton: na luzie, bez typowych haseł reklamowych. Teksty z prototypu są roboczymi propozycjami, FAQ, kadra i opis klubu pochodzą od klienta i mają zostać.
 
 ## Treści i dane (z materiałów klienta)
