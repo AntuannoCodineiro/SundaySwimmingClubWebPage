@@ -21,10 +21,17 @@
       var ma = y > wys;
       if (ma !== przypiety) {
         przypiety = ma;
+        gora.classList.remove('animuj');
         gora.classList.toggle('przypiety', ma);
         gora.classList.toggle('ukryty', ma);
         document.body.style.paddingTop = ma ? wys + 'px' : '';
         ostatni = y;
+        if (ma) {
+          /* animację włączamy dopiero po pierwszej klatce, żeby nagłówek nie wyskakiwał przy przypinaniu */
+          window.requestAnimationFrame(function () {
+            window.requestAnimationFrame(function () { if (przypiety) gora.classList.add('animuj'); });
+          });
+        }
         return;
       }
       if (przypiety) {

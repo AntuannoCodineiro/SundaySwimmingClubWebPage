@@ -192,8 +192,8 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 .gora.przypiety {
   position: fixed; top: 0; left: 0; right: 0; z-index: 80;
   box-shadow: 0 6px 24px rgba(11, 11, 11, .12);
-  transition: transform .3s ease;
 }
+.gora.przypiety.animuj { transition: transform .3s ease; }
 /* chowa się przy przewijaniu w dół, wraca przy przewijaniu w górę */
 .gora.przypiety.ukryty { transform: translateY(-100%); box-shadow: none; }
 .gora.przypiety .kontener { padding-block: 8px; }
@@ -201,7 +201,7 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 @media (min-width: 760px) {
   .gora.przypiety .kontener { flex-direction: row; justify-content: space-between; gap: 16px; }
 }
-@media (prefers-reduced-motion: reduce) { .gora.przypiety { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .gora.przypiety.animuj { transition: none; } }
 
 /* ---------- przyciski ---------- */
 
