@@ -41,9 +41,8 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 - Potwierdzenie harmonogramu zajęć grupowych (podany przez klienta, wpisany na stronie rezerwacji).
 - Potwierdzenie dostępu do konta na Instagramie dla autorskiego widżetu (adres profilu jest już wpisany).
 - Adres domeny i hostingu.
-- Zdjęcie hero zgodne z konceptem (podwodne, pełny kadr). Na razie IMG_4040.
-- Zgody osób widocznych na zdjęciach i polityka prywatności.
-- Czarny czepek jest wariantem wygenerowanym, klub go jeszcze nie ma.
+- Polityka prywatności (wersja robocza do przeglądu).
+- Opisy wszystkich grup (z grupą początkującą Freshman od 2027), zdjęcia do hero (poziome i pionowe) i do galerii, zgody uczestników na wizerunek.
 
 ## Wymagania jakości
 
