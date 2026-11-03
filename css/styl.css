@@ -99,22 +99,21 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 .menu-przycisk {
   display: none;
   align-items: center; gap: 10px;
-  min-height: 44px; padding: 8px 18px;
+  min-height: 44px; padding: 8px 16px 8px 14px;
   background: var(--czern); color: var(--biel);
   border: 0; border-radius: 99px; cursor: pointer;
   font: 500 14px/1 var(--f-mono);
 }
 .menu-przycisk .kreski, .menu-przycisk .kreski::before, .menu-przycisk .kreski::after {
   display: block; width: 18px; height: 2px; background: currentColor; border-radius: 2px;
-  transition: transform .2s, opacity .2s;
 }
 .menu-przycisk .kreski { position: relative; }
 .menu-przycisk .kreski::before, .menu-przycisk .kreski::after { content: ""; position: absolute; left: 0; }
 .menu-przycisk .kreski::before { top: -6px; }
 .menu-przycisk .kreski::after { top: 6px; }
-.menu-przycisk[aria-expanded="true"] .kreski { background: transparent; }
-.menu-przycisk[aria-expanded="true"] .kreski::before { top: 0; transform: rotate(45deg); }
-.menu-przycisk[aria-expanded="true"] .kreski::after { top: 0; transform: rotate(-45deg); }
+
+.menu-zamknij { display: none; }
+.menu-tlo { display: none; }
 
 .menu {
   display: flex; gap: 2px; padding: 6px;
@@ -137,13 +136,36 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 }
 
 @media (max-width: 759.98px) {
-  .js .menu-przycisk { display: inline-flex; }
-  .menu { flex-direction: column; border-radius: var(--promien); gap: 0; padding: 8px; font-size: 16px; }
+  .js .gora .kontener { display: grid; grid-template-columns: 1fr auto 1fr; }
+  .js .menu-przycisk { display: inline-flex; grid-column: 1; grid-row: 1; justify-self: start; }
+  .js .logo { grid-column: 2; grid-row: 1; }
+
+  /* menu jako szuflada wysuwana z lewej strony */
+  .menu { flex-direction: column; border-radius: 0; gap: 0; padding: 8px; font-size: 17px; width: 100%; }
   .menu a { padding: 16px 18px; }
+  .js .menu {
+    position: fixed; top: 0; bottom: 0; left: 0; z-index: 120;
+    width: min(86vw, 340px); padding: 76px 14px 24px; overflow-y: auto;
+    transform: translateX(-100%); visibility: hidden;
+    transition: transform .28s ease, visibility 0s linear .28s;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .35);
+  }
+  .js .menu.otwarte { transform: none; visibility: visible; transition: transform .28s ease; }
+  .js .menu a { border-radius: 14px; }
+  .js .menu-zamknij {
+    display: grid; place-items: center; position: absolute; top: 16px; right: 16px;
+    width: 44px; height: 44px; border: 2px solid var(--biel); border-radius: 50%;
+    background: transparent; color: var(--biel); cursor: pointer; font: 400 28px/1 var(--f-tekst);
+  }
+  .js .menu-zamknij:hover { background: var(--turkus); border-color: var(--turkus); color: var(--czern); }
+  .js .menu-tlo { position: fixed; inset: 0; z-index: 110; background: rgba(11, 11, 11, .55); }
+  .js .menu-tlo[hidden] { display: none; }
+  .js .menu-tlo:not([hidden]) { display: block; }
+  body.menu-otwarte { overflow: hidden; }
   .gora .kontener { flex-wrap: wrap; gap: 12px; }
-  .menu { width: 100%; }
-  .js .menu { display: none; }
-  .js .menu.otwarte { display: flex; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .menu, .js .menu.otwarte { transition: none; }
 }
 
 /* ---------- przyciski ---------- */

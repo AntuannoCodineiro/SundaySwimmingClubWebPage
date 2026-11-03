@@ -8,27 +8,33 @@
     grupowe: 'Grupa: próbny trening 100 zł, ceny pakietów grupowych ustalamy indywidualnie.'
   };
 
-  /* ---------- menu ---------- */
+  /* ---------- menu (szuflada z lewej na telefonie) ---------- */
   var przycisk = document.querySelector('.menu-przycisk');
   var menu = document.getElementById('menu');
   if (przycisk && menu) {
-    var etykieta = przycisk.querySelector('.menu-tekst');
-    var ustawMenu = function (otwarte) {
+    var tlo = document.createElement('div');
+    tlo.className = 'menu-tlo';
+    tlo.hidden = true;
+    document.body.appendChild(tlo);
+    var zamknij = menu.querySelector('.menu-zamknij');
+
+    var ustawMenu = function (otwarte, bezFokusu) {
       menu.classList.toggle('otwarte', otwarte);
+      tlo.hidden = !otwarte;
+      document.body.classList.toggle('menu-otwarte', otwarte);
       przycisk.setAttribute('aria-expanded', otwarte ? 'true' : 'false');
-      if (etykieta) etykieta.textContent = otwarte ? 'Zamknij' : 'Menu';
+      if (otwarte && zamknij) zamknij.focus();
+      if (!otwarte && !bezFokusu) przycisk.focus();
     };
-    przycisk.addEventListener('click', function () {
-      ustawMenu(przycisk.getAttribute('aria-expanded') !== 'true');
-    });
+    przycisk.addEventListener('click', function () { ustawMenu(true); });
+    if (zamknij) zamknij.addEventListener('click', function () { ustawMenu(false); });
+    tlo.addEventListener('click', function () { ustawMenu(false); });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) ustawMenu(false, true); });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && przycisk.getAttribute('aria-expanded') === 'true') {
-        ustawMenu(false);
-        przycisk.focus();
-      }
+      if (e.key === 'Escape' && przycisk.getAttribute('aria-expanded') === 'true') ustawMenu(false);
     });
     var szeroki = window.matchMedia('(min-width: 760px)');
-    var reset = function () { if (szeroki.matches) ustawMenu(false); };
+    var reset = function () { if (szeroki.matches) ustawMenu(false, true); };
     if (szeroki.addEventListener) szeroki.addEventListener('change', reset);
     else if (szeroki.addListener) szeroki.addListener(reset);
   }
