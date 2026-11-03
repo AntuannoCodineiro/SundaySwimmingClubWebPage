@@ -8,16 +8,36 @@
     grupowe: 'Grupa: próbny trening 100 zł, ceny pakietów grupowych ustalamy indywidualnie.'
   };
 
-  /* ---------- naglowek przypinany po przewinieciu w dol ---------- */
+  /* ---------- nagłówek: chowa się przy scrollu w dół, wraca przy scrollu w górę ----------
+     telefon: nagłówek jest przyklejony (sticky) od samej góry strony, bez zmiany układu,
+     komputer: duży nagłówek na górze, po przewinięciu przypina się kompaktowy pasek */
   var gora = document.querySelector('.gora');
   if (gora) {
+    var komputer = window.matchMedia('(min-width: 760px)');
     var wys = gora.offsetHeight;
     var przypiety = false;
     var czeka = false;
     var ostatni = window.pageYOffset || 0;
+
+    var wlaczAnimacje = function () {
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () { gora.classList.add('animuj'); });
+      });
+    };
+
     var ocen = function () {
       czeka = false;
       var y = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (!komputer.matches) {
+        gora.classList.toggle('cien', y > 4);
+        var dt = y - ostatni;
+        if (y <= wys) { gora.classList.remove('ukryty'); ostatni = y; }
+        else if (dt > 6) { gora.classList.add('ukryty'); ostatni = y; }
+        else if (dt < -6) { gora.classList.remove('ukryty'); ostatni = y; }
+        return;
+      }
+
       var ma = y > wys;
       if (ma !== przypiety) {
         przypiety = ma;
@@ -26,12 +46,10 @@
         gora.classList.toggle('ukryty', ma);
         document.body.style.paddingTop = ma ? wys + 'px' : '';
         ostatni = y;
-        if (ma) {
-          /* animację włączamy dopiero po pierwszej klatce, żeby nagłówek nie wyskakiwał przy przypinaniu */
-          window.requestAnimationFrame(function () {
-            window.requestAnimationFrame(function () { if (przypiety) gora.classList.add('animuj'); });
-          });
-        }
+        /* animację włączamy dopiero po pierwszej klatce, żeby nagłówek nie wyskakiwał przy przypinaniu */
+        if (ma) window.requestAnimationFrame(function () {
+          window.requestAnimationFrame(function () { if (przypiety) gora.classList.add('animuj'); });
+        });
         return;
       }
       if (przypiety) {
@@ -42,13 +60,16 @@
         ostatni = y;
       }
     };
+
     var zmierz = function () {
-      gora.classList.remove('przypiety');
+      gora.classList.remove('przypiety', 'ukryty', 'cien', 'animuj');
       document.body.style.paddingTop = '';
       przypiety = false;
       wys = gora.offsetHeight;
+      if (!komputer.matches) wlaczAnimacje();
       ocen();
     };
+
     window.addEventListener('scroll', function () {
       if (!czeka) { czeka = true; window.requestAnimationFrame(ocen); }
     }, { passive: true });
@@ -60,6 +81,7 @@
     });
     window.addEventListener('load', zmierz);
     gora.addEventListener('focusin', function () { gora.classList.remove('ukryty'); });
+    if (!komputer.matches) wlaczAnimacje();
     ocen();
   }
 

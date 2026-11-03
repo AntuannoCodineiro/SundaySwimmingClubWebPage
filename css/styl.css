@@ -203,6 +203,15 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 }
 @media (prefers-reduced-motion: reduce) { .gora.przypiety.animuj { transition: none; } }
 
+/* telefon: nagłówek przyklejony od samej góry strony (sticky), chowa się w dół i wraca w górę */
+@media (max-width: 759.98px) {
+  .gora { position: sticky; top: 0; z-index: 80; }
+  .gora.animuj { transition: transform .3s ease, box-shadow .3s ease; }
+  .gora.cien { box-shadow: 0 6px 24px rgba(11, 11, 11, .12); }
+  .gora.ukryty { transform: translateY(-100%); box-shadow: none; }
+}
+@media (max-width: 759.98px) and (prefers-reduced-motion: reduce) { .gora.animuj { transition: none; } }
+
 /* ---------- przyciski ---------- */
 
 .przycisk {
