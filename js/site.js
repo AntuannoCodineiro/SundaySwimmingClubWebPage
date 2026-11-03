@@ -14,13 +14,26 @@
     var wys = gora.offsetHeight;
     var przypiety = false;
     var czeka = false;
+    var ostatni = window.pageYOffset || 0;
     var ocen = function () {
       czeka = false;
-      var ma = (window.pageYOffset || document.documentElement.scrollTop) > wys;
-      if (ma === przypiety) return;
-      przypiety = ma;
-      gora.classList.toggle('przypiety', ma);
-      document.body.style.paddingTop = ma ? wys + 'px' : '';
+      var y = window.pageYOffset || document.documentElement.scrollTop;
+      var ma = y > wys;
+      if (ma !== przypiety) {
+        przypiety = ma;
+        gora.classList.toggle('przypiety', ma);
+        gora.classList.toggle('ukryty', ma);
+        document.body.style.paddingTop = ma ? wys + 'px' : '';
+        ostatni = y;
+        return;
+      }
+      if (przypiety) {
+        var d = y - ostatni;
+        if (d > 6) { gora.classList.add('ukryty'); ostatni = y; }
+        else if (d < -6) { gora.classList.remove('ukryty'); ostatni = y; }
+      } else {
+        ostatni = y;
+      }
     };
     var zmierz = function () {
       gora.classList.remove('przypiety');
@@ -39,6 +52,7 @@
       zmierz();
     });
     window.addEventListener('load', zmierz);
+    gora.addEventListener('focusin', function () { gora.classList.remove('ukryty'); });
     ocen();
   }
 
