@@ -8,6 +8,40 @@
     grupowe: 'Grupa: próbny trening 100 zł, ceny pakietów grupowych ustalamy indywidualnie.'
   };
 
+  /* ---------- naglowek przypinany po przewinieciu w dol ---------- */
+  var gora = document.querySelector('.gora');
+  if (gora) {
+    var wys = gora.offsetHeight;
+    var przypiety = false;
+    var czeka = false;
+    var ocen = function () {
+      czeka = false;
+      var ma = (window.pageYOffset || document.documentElement.scrollTop) > wys;
+      if (ma === przypiety) return;
+      przypiety = ma;
+      gora.classList.toggle('przypiety', ma);
+      document.body.style.paddingTop = ma ? wys + 'px' : '';
+    };
+    var zmierz = function () {
+      gora.classList.remove('przypiety');
+      document.body.style.paddingTop = '';
+      przypiety = false;
+      wys = gora.offsetHeight;
+      ocen();
+    };
+    window.addEventListener('scroll', function () {
+      if (!czeka) { czeka = true; window.requestAnimationFrame(ocen); }
+    }, { passive: true });
+    var szer = window.innerWidth;
+    window.addEventListener('resize', function () {
+      if (window.innerWidth === szer) return;
+      szer = window.innerWidth;
+      zmierz();
+    });
+    window.addEventListener('load', zmierz);
+    ocen();
+  }
+
   /* ---------- menu (szuflada z lewej na telefonie) ---------- */
   var przycisk = document.querySelector('.menu-przycisk');
   var menu = document.getElementById('menu');
@@ -15,7 +49,7 @@
     var tlo = document.createElement('div');
     tlo.className = 'menu-tlo';
     tlo.hidden = true;
-    document.body.appendChild(tlo);
+    (document.querySelector('.gora') || document.body).appendChild(tlo);
     var zamknij = menu.querySelector('.menu-zamknij');
 
     var ustawMenu = function (otwarte, bezFokusu) {
