@@ -12,6 +12,9 @@ Kolejność: najpierw rzeczy, które blokują publikację, potem treści od klie
 - ⬜ **Przełączenie odbioru zgłoszeń na adres klubu.** Po potwierdzeniu ze strony klubu zmienić adres przy kluczu w panelu Web3Forms na `sundayswimmingclubpoznan@gmail.com`.
 - ✅ **Reprezentacja stowarzyszenia.** Stowarzyszenie reprezentuje Kacper Matysiak.
 - ✅ **Regulamin działalności stowarzyszenia zwykłego.** Zapytać Kacpra, czy klub ma regulamin działalności (stowarzyszenie zwykłe zwykle go ma, składa się go przy wpisie do ewidencji) i czy forma prawna pozwala pobierać opłaty za zajęcia. Potwierdzić z księgowym lub prawnikiem.
+- ✅ **Okresy przechowywania i cele przetwarzania danych.** Potwierdzone przez Kacpra, do wpisania w politykę prywatności (brakuje konkretnych odpowiedzi w repo).
+- ✅ **Zgoda Kacpra na dane w polityce prywatności.** Potwierdzone (imię, nazwisko, adres rejestrowy stowarzyszenia jako administrator).
+- ✅ **Zajęcia solo i para: termin i czas odpowiedzi.** Potwierdzone przez Kacpra, do wpisania w komunikacie po wysłaniu formularza.
 - ⬜ **Polityka prywatności.** Wersja robocza jest napisana (administrator, cele, odbiorcy, prawa, cookies z tabelą). Uzupełnić pola TODO (dostawca formularzy i hostingu, okresy przechowywania, zgody na wizerunek), przejrzeć z prawnikiem, usunąć `noindex` i dopisać do `sitemap.xml`.
 - ✅ **Regulamin zajęć.** Nie jest publikowany na stronie, dostępny jest na zajęciach. Strona regulaminu i link w stopce usunięte.
 - ⬜ **Zgody na wizerunek.** Zebrać zgody osób widocznych na zdjęciach (galeria, oferta, klub). Nowa osoba na zdjęciu z odkrytego basenu (`IMG_3514`). Czekamy na informację od klienta.
