@@ -245,13 +245,17 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
   gap: clamp(16px, 3vw, 32px); padding: clamp(20px, 3vw, 30px) clamp(16px, 3vw, 32px);
 }
 .tor:nth-child(even) { background: #d3f1ee; }
-.tor + .tor::before {
-  content: ""; position: absolute; left: 0; right: 0; top: -6px; height: 12px; z-index: 1;
-  background:
-    radial-gradient(circle at 8px 6px, var(--roz) 5px, transparent 5.5px),
-    radial-gradient(circle at 24px 6px, var(--turkus) 5px, transparent 5.5px);
-  background-size: 32px 12px; background-repeat: repeat-x;
+.tor + .tor::before, .tor + .tor::after {
+  content: ""; position: absolute; top: -6px; height: 12px; z-index: 1;
+  background-image: radial-gradient(circle at 6px 6px, var(--lina, #1e6fd0) 5px, transparent 5.5px);
+  background-size: 12px 12px; background-repeat: repeat-x;
 }
+/* jak na basenach sportowych: ostatnie metry przy ścianach czerwone, środek w kolorze toru */
+.tor + .tor::before { left: 0; right: 0; --lina: #d7263d; }
+.tor + .tor::after { left: clamp(36px, 7%, 84px); right: clamp(36px, 7%, 84px); }
+.tor:nth-child(2)::after { --lina: #1ea34a; }
+.tor:nth-child(3)::after { --lina: #1e6fd0; }
+.tor:nth-child(4)::after { --lina: #f4c20d; }
 .tor-numer {
   display: grid; place-items: center; flex: none; width: clamp(56px, 9vw, 76px); aspect-ratio: 1;
   background: var(--biel); border: 3px solid var(--czern); border-radius: 12px;
