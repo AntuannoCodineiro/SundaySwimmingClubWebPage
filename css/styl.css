@@ -254,7 +254,7 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
   padding-block: clamp(32px, 6vw, 56px) clamp(150px, 20vw, 220px);
 }
 .hero h1 { font-size: clamp(1.9rem, 10vw, 4.5rem); line-height: 1.04; letter-spacing: -.035em; color: var(--czern); }
-.hero h1 .t { color: #14ac9d; }
+.hero h1 .t { color: var(--turkus-tekst); }
 .hero-tresc p {
   font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--tekst-mocny);
   max-width: 24em; margin: clamp(20px, 3vw, 28px) auto clamp(24px, 3.4vw, 34px);
@@ -378,7 +378,7 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 .liczby > div { padding: clamp(20px, 3vw, 30px) var(--margines); border-right: 1px solid var(--linia);  text-align: center; }
 .liczby > div:last-child { border-right: 0; }
 .liczby b { display: block; font: 800 clamp(3.5rem, 11vw, 8.75rem)/1 var(--f-naglowek); letter-spacing: -.05em; }
-.liczby > div:nth-child(1) b { color: #19b5a5; }
+.liczby > div:nth-child(1) b { color: var(--turkus-tekst); }
 .liczby > div:nth-child(2) b { color: var(--biel); -webkit-text-stroke: 6px var(--czern); paint-order: stroke fill; }
 .liczby > div:nth-child(3) b { color: var(--roz-tekst); }
 .liczby span { display: block; font: 500 13px/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; }
