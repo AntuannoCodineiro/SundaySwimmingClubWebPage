@@ -1,0 +1,9 @@
+Czcionki używane na stronie, hostowane lokalnie (wcześniej ładowane z Google Fonts):
+
+- Unbounded (nagłówki)
+- Hanken Grotesk (tekst)
+- DM Mono (etykiety)
+
+Wszystkie trzy są wydane na licencji SIL Open Font License 1.1, która pozwala na ich osadzanie i redystrybucję na stronach internetowych.
+Pełny tekst licencji: https://openfontlicense.org/
+Pliki zawierają podzbiory znaków (łaciński i łaciński rozszerzony, wystarczające dla języka polskiego).

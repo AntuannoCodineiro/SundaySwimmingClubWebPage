@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Po uzupełnieniu dodaj polityka-prywatnosci.html -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://sundayswimmingclub.pl/</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/klub</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/oferta</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/oplaty</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/galeria</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/faq</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/kontakt</loc></url>
-  <url><loc>https://sundayswimmingclub.pl/rezerwacje</loc></url>
+  <url><loc>https://sundayswimmingclub.pl/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://sundayswimmingclub.pl/klub</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://sundayswimmingclub.pl/oferta</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://sundayswimmingclub.pl/oplaty</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://sundayswimmingclub.pl/galeria</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://sundayswimmingclub.pl/faq</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://sundayswimmingclub.pl/kontakt</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://sundayswimmingclub.pl/rezerwacje</loc><lastmod>2026-11-05</lastmod></url>
 </urlset>
