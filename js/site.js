@@ -264,6 +264,27 @@
     }, function (err) { clearTimeout(limit); throw err; });
   }
 
+  function wyslijMailZwrotny(form) {
+    var m = CONF.mailZwrotny || {};
+    var typ = form.dataset.typ;
+    if (!m.serviceId || !m.templateId || !m.publicKey || (typ !== 'grupowe' && typ !== 'indywidualne')) return;
+    var dane = new FormData(form);
+    var email = String(dane.get('email') || '').trim();
+    if (!email) return;
+    var forma = form.querySelector('input[name="forma"]:checked');
+    var rodzaj = typ === 'grupowe' ? 'Zajęcia grupowe' : 'Zajęcia indywidualne (' + (forma && forma.value === 'para' ? 'w parze' : 'solo') + ')';
+    fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        service_id: m.serviceId,
+        template_id: m.templateId,
+        user_id: m.publicKey,
+        template_params: { email: email, imie: String(dane.get('imie') || '').trim(), rodzaj: rodzaj, basen: String(dane.get('basen') || '').trim() }
+      })
+    }).catch(function () {});
+  }
+
   document.querySelectorAll('form[data-formularz]').forEach(function (form) {
     var pola = form.querySelectorAll('[required]');
     var sukces = form.parentElement.querySelector('.sukces');
@@ -297,6 +318,7 @@
       przycisk.disabled = true;
       przycisk.textContent = 'Wysyłam…';
       wyslij(form).then(function () {
+        wyslijMailZwrotny(form);
         form.hidden = true;
         if (sukces) {
           var opis = sukces.querySelector('[data-opis]');

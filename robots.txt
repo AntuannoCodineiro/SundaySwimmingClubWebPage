@@ -1,5 +1,6 @@
 # Domena: sundayswimmingclub.pl
 User-agent: *
 Allow: /
+Disallow: /maile/
 
 Sitemap: https://sundayswimmingclub.pl/sitemap.xml
