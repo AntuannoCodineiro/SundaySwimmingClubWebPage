@@ -459,7 +459,19 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 .instagram > div.kolor-roz { background: var(--roz); }
 .instagram > div.kolor-turkus { background: var(--turkus); }
 .instagram > div > img.czepek-kafel { width: 72%; }
-.instagram-widget iframe { display: block; width: 100%; border: 0; overflow: hidden; }
+
+/* feed z Instagrama na stronie głównej */
+.ig-sekcja { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: clamp(28px, 5vw, 56px); align-items: start; }
+.ig-sekcja h2 { font-size: clamp(1.5rem, 3.6vw, 2.75rem); line-height: 1.08; margin-bottom: 14px; overflow-wrap: break-word; }
+.ig-sekcja p { font-size: clamp(1.02rem, 1.8vw, 1.125rem); color: var(--tekst); margin-bottom: 20px; max-width: 30em; }
+.ig-sekcja .uwaga { font-size: 12px; margin: 14px 0 0; }
+.instagram--6 { grid-template-columns: repeat(3, 1fr); }
+.instagram--6 > div { aspect-ratio: 4 / 5; }
+.instagram-feed ig-feed { --ig-cols: 3; --ig-cols-sm: 3; --ig-gap: 8px; --ig-border: none; --ig-ratio: 4 / 5; --ig-radius: 8px; --ig-focus: var(--roz); }
+.instagram-feed--szeroki ig-feed { --ig-cols: 6; }
+.instagram-feed--szeroki .instagram--6 { grid-template-columns: repeat(6, 1fr); }
+@media (max-width: 799.98px) { .ig-sekcja { grid-template-columns: 1fr; } }
+@media (max-width: 719.98px) { .instagram-feed--szeroki .instagram--6 { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 719.98px) { .instagram { grid-template-columns: repeat(3, 1fr); } .instagram--4 { grid-template-columns: repeat(4, 1fr); } }
 
 .uwaga { font: 400 12px/1.4 var(--f-mono); color: var(--szary); margin-top: 14px; }

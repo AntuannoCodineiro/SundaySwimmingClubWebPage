@@ -127,7 +127,7 @@
     }
   });
 
-  /* ---------- treści zewnętrzne (LightWidget) tylko po zgodzie ---------- */
+  /* ---------- treści zewnętrzne (Instagram) tylko po zgodzie ---------- */
   var zgody = window.SSC_ZGODY || { stan: function () { return { zewnetrzne: false }; }, zezwolZewnetrzne: function () {} };
   var odswiezanie = [];
   var bylaZgoda = zgody.stan().zewnetrzne;
@@ -139,25 +139,31 @@
     odswiezanie.forEach(function (f) { f(jest); });
   });
 
-  /* widżet LightWidget */
-  var lwId = CONF.instagram && CONF.instagram.lightwidgetId;
-  if (lwId) {
-    var lwZaladowany = false;
-    odswiezanie.push(function lw(jest) {
-      document.querySelectorAll('[data-lightwidget-uwaga]').forEach(function (p) {
+  /* feed z Instagrama: własny widżet, dane z serwera pośredniczącego (Cloudflare Worker) */
+  var feedUrl = CONF.instagram && CONF.instagram.feedUrl;
+  if (feedUrl) {
+    var feedZaladowany = false;
+    odswiezanie.push(function feed(jest) {
+      document.querySelectorAll('[data-ig-uwaga]').forEach(function (p) {
         if (jest) { p.hidden = true; return; }
         p.hidden = false;
-        p.innerHTML = 'Widżet Instagrama wymaga zgody na treści zewnętrzne. <button type="button" class="link-przycisk">Włącz widżet</button>';
+        p.innerHTML = 'Posty z Instagrama wymagają zgody na treści zewnętrzne. <button type="button" class="link-przycisk">Włącz posty</button>';
         p.querySelector('button').addEventListener('click', function () { zgody.zezwolZewnetrzne(); });
       });
-      if (!jest || lwZaladowany) return;
-      lwZaladowany = true;
-      document.querySelectorAll('[data-lightwidget]').forEach(function (box) {
-        box.innerHTML = '<iframe src="https://lightwidget.com/widgets/' + encodeURIComponent(lwId) +
-          '.html" title="Najnowsze posty na Instagramie" class="lightwidget-widget" loading="lazy" scrolling="no" style="min-height:240px"></iframe>';
-      });
+      if (!jest || feedZaladowany) return;
+      feedZaladowany = true;
       var s = document.createElement('script');
-      s.src = 'https://cdn.lightwidget.com/widgets/lightwidget.js';
+      s.src = 'js/ig-feed.js';
+      s.onload = function () {
+        document.querySelectorAll('[data-ig-feed]').forEach(function (box) {
+          var el = document.createElement('ig-feed');
+          el.setAttribute('src', feedUrl);
+          el.setAttribute('limit', '6');
+          if (igUrl) el.setAttribute('profile', igUrl);
+          box.innerHTML = '';
+          box.appendChild(el);
+        });
+      };
       document.body.appendChild(s);
     });
   }

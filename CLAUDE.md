@@ -16,7 +16,7 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 - **Język:** tylko polski.
 - **Formularze:** wysyłka przez Web3Forms lub Formspree na `sundayswimmingclubpoznan@gmail.com`. Klucz/endpoint są w jednym miejscu w konfiguracji (`js/config.js`). Klucz Web3Forms jest publiczny z założenia (strona statyczna), więc jest wpisany w repozytorium. Nie wpisuj tam żadnych tajnych kluczy.
 - **Rezerwacje:** na razie bez kalendarza Cal.com (odłożone na później). Strona pokazuje harmonogram zajęć grupowych, a zapisy idą przez formularz albo kontakt bezpośredni. Ręczna akceptacja przez trenerów, limit 8 osób w grupie plus 2 miejsca rezerwowe, lista rezerwowa prowadzona ręcznie.
-- **Instagram zamiast bloga:** autorski widżet (zamiast LightWidget), do czasu potwierdzenia dostępu do konta od klienta jest podgląd ze zdjęć.
+- **Instagram zamiast bloga:** autorski widżet `<ig-feed>` (`js/ig-feed.js`), dane z Cloudflare Workera (`instagram.feedUrl` w `js/config.js`). Posty ładują się dopiero po zgodzie na treści zewnętrzne. Widżet jest na stronie głównej i w galerii.
 - **Hero:** zdjęcie, nie wideo.
 - **SEO:** podstawy (tytuły, opisy, nagłówki, alt, Open Graph, `sitemap.xml`, `robots.txt`, dane strukturalne `SportsClub`/`LocalBusiness`).
 
@@ -39,7 +39,6 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 ## Do uzupełnienia przez klienta (nie zgaduj, oznacz w kodzie jako TODO)
 
 - Potwierdzenie harmonogramu zajęć grupowych (podany przez klienta, wpisany na stronie rezerwacji).
-- Potwierdzenie dostępu do konta na Instagramie dla autorskiego widżetu (adres profilu jest już wpisany).
 - Adres domeny i hostingu.
 - Polityka prywatności (wersja robocza do przeglądu).
 - Opisy wszystkich grup (z grupą początkującą Freshman od 2027), zdjęcia do hero (poziome i pionowe) i do galerii, zgody uczestników na wizerunek.

@@ -26,7 +26,7 @@ window.SSC_CONFIG = {
   },
   instagram: {
     url: 'https://www.instagram.com/sunday_swimming_club/',
-    /* TODO (klient): identyfikator widżetu z lightwidget.com (ciąg znaków z adresu osadzenia). */
-    lightwidgetId: ''
+    /* Adres własnego feedu (Cloudflare Worker). Posty ładują się dopiero po zgodzie na treści zewnętrzne. */
+    feedUrl: 'https://sunday-instagram-feed.sunday-instagram-feed.workers.dev/feed'
   }
 };
