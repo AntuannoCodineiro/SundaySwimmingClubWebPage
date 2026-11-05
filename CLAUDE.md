@@ -12,7 +12,7 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 ## Decyzje
 
 - **Technologia:** czysty HTML, CSS i JS, bez frameworka i bez kroku budowania. Wspólne elementy (menu, stopka) trzeba powtórzyć na każdej stronie, więc trzymaj je w jednym wzorcu i kopiuj świadomie. Można dodać mały skrypt wstawiający menu i stopkę, jeśli to uprości pracę, ale strona ma działać po otwarciu plików z dysku i na zwykłym hostingu statycznym.
-- **Podstrony (osobne pliki):** `index.html` (start), `klub.html`, `oferta.html`, `cennik.html`, `galeria.html`, `faq.html`, `kontakt.html`, `rezerwacje.html`, plus `polityka-prywatnosci.html`. Regulamin zajęć nie jest publikowany na stronie (dostępny na zajęciach).
+- **Podstrony (osobne pliki):** `index.html` (start), `klub.html`, `oferta.html`, `oplaty.html`, `galeria.html`, `faq.html`, `kontakt.html`, `rezerwacje.html`, plus `polityka-prywatnosci.html`. Regulamin zajęć nie jest publikowany na stronie (dostępny na zajęciach).
 - **Język:** tylko polski.
 - **Formularze:** wysyłka przez Web3Forms lub Formspree na `sundayswimmingclubpoznan@gmail.com`. Klucz/endpoint są w jednym miejscu w konfiguracji (`js/config.js`). Klucz Web3Forms jest publiczny z założenia (strona statyczna), więc jest wpisany w repozytorium. Nie wpisuj tam żadnych tajnych kluczy.
 - **Rezerwacje:** na razie bez kalendarza Cal.com (odłożone na później). Strona pokazuje harmonogram zajęć grupowych, a zapisy idą przez formularz albo kontakt bezpośredni. Ręczna akceptacja przez trenerów, limit 8 osób w grupie plus 2 miejsca rezerwowe, lista rezerwowa prowadzona ręcznie.
@@ -33,7 +33,7 @@ Prawdziwa, responsywna strona klubu pływackiego z Poznania. Powstaje na bazie k
 - Pływalnie: POSiR Grunwald, Winogrady, Rataje, Chwiałka.
 - Kadra: Albert Warzocha (medale Mistrzostw Polski), Kacper Matysiak (dawniej zawodnik, trener).
 - Doświadczenie: 15 lat zawodniczo, 5 lat w zawodzie trenera.
-- Cennik (45 min): solo 1× 160 zł, 4× 600 zł + plan 150 zł, 8× 1150 zł + plan 150 zł, sam plan solo 200 zł. Para: 1× 200 zł, 4× 750 zł. Analiza wideo 300 zł (+200 zł plan). Próbny trening grupowy 100 zł. Ceny pakietów grupowych są ustalane indywidualnie (informacja od klienta).
+- Opłaty (45 min): solo 1× 160 zł, 4× 600 zł + plan 150 zł, 8× 1150 zł + plan 150 zł, sam plan solo 200 zł. Para: 1× 200 zł, 4× 750 zł. Analiza wideo 300 zł (+200 zł plan). Próbny trening grupowy 100 zł. Ceny pakietów grupowych są ustalane indywidualnie (informacja od klienta).
 - Pola formularzy: imię, nazwisko, e-mail, telefon, preferowany basen. Formularz indywidualny dodatkowo: solo lub para. Dwa osobne formularze: grupowy i indywidualny.
 
 ## Do uzupełnienia przez klienta (nie zgaduj, oznacz w kodzie jako TODO)

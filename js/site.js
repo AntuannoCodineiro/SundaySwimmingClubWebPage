@@ -2,11 +2,6 @@
   'use strict';
 
   var CONF = window.SSC_CONFIG || {};
-  var CENY = {
-    solo: 'Solo: 160 zł za 45 minut, pakiet 4 zajęć 600 zł, 8 zajęć 1150 zł.',
-    para: 'W parze: 200 zł za 45 minut, pakiet 4 zajęć 750 zł.',
-    grupowe: 'Grupa: próbny trening 100 zł, ceny pakietów grupowych ustalamy indywidualnie.'
-  };
 
   /* ---------- nagłówek: chowa się przy scrollu w dół, wraca przy scrollu w górę ----------
      telefon: nagłówek jest przyklejony (sticky) od samej góry strony, bez zmiany układu,
@@ -173,10 +168,8 @@
   document.querySelectorAll('[data-zapisy]').forEach(function (box) {
     var przyciski = box.querySelectorAll('.przelacznik--tryb button');
     var panele = box.querySelectorAll('[data-panel]');
-    var cena = box.querySelector('[data-cena]');
 
     function ustaw(tryb) {
-      var forma = box.querySelector('input[name="forma"]:checked');
       przyciski.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.tryb === tryb ? 'true' : 'false'); });
       panele.forEach(function (p) { p.hidden = p.dataset.panel !== tryb; });
       box.querySelectorAll('[data-dla]').forEach(function (el) { el.hidden = el.dataset.dla !== tryb; });
@@ -184,14 +177,10 @@
         var kol = el.parentElement;
         kol.hidden = Array.prototype.every.call(kol.children, function (c) { return c.hidden; });
       });
-      if (cena) cena.textContent = tryb === 'grupowe' ? CENY.grupowe : CENY[forma ? forma.value : 'solo'];
     }
 
     przyciski.forEach(function (b) {
       b.addEventListener('click', function () { ustaw(b.dataset.tryb); });
-    });
-    box.querySelectorAll('input[name="forma"]').forEach(function (r) {
-      r.addEventListener('change', function () { if (cena) cena.textContent = CENY[r.value]; });
     });
 
     var start = 'indywidualne';

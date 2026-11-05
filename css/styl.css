@@ -415,9 +415,9 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 .karta .cena { margin-top: auto; font: 700 1.5rem/1 var(--f-naglowek); letter-spacing: -.02em; }
 @media (max-width: 859.98px) { .karty { grid-template-columns: 1fr; } .karta { flex-direction: row; flex-wrap: wrap; align-items: center; } .karta p { flex: 1 1 100%; } .karta .cena { margin: 0; } .karta h2 { flex: 1; } }
 
-/* ---------- cennik ---------- */
+/* ---------- opłaty ---------- */
 
-.cennik { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.oplaty { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .pudelko { border: 2px solid var(--czern); border-radius: var(--promien); padding: clamp(22px, 3vw, 30px); background: var(--biel); }
 .pudelko--turkus { background: var(--turkus); }
 .pudelko--roz { background: var(--roz); }
@@ -433,7 +433,7 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 .pudelko td.tekst { font: 500 .875rem/1.3 var(--f-mono); letter-spacing: 0; white-space: normal; max-width: 10em; }
 .pudelko small { display: block; font: 400 .8125rem/1.3 var(--f-tekst); margin-top: 3px; }
 .pudelko:not(.pudelko--turkus):not(.pudelko--roz) th, .pudelko:not(.pudelko--turkus):not(.pudelko--roz) td { border-top-color: var(--linia); }
-@media (max-width: 799.98px) { .cennik { grid-template-columns: 1fr; } }
+@media (max-width: 799.98px) { .oplaty { grid-template-columns: 1fr; } }
 
 /* ---------- galeria ---------- */
 
@@ -543,7 +543,6 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 .sukces h3 { font-size: clamp(1.3rem, 3vw, 2rem); line-height: 1.05; }
 .sukces p { font-size: 1.0625rem; }
 
-.cena-info { margin-top: 18px; font: 400 13px/1.5 var(--f-mono); color: var(--tekst); }
 
 /* kontakt */
 .kontakt { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 56px); }
