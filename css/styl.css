@@ -242,6 +242,8 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 }
 .linki a { text-decoration: none; border-bottom: 3px solid var(--roz); padding-bottom: 4px; }
 .linki a:hover { border-bottom-color: var(--turkus); }
+.sekcja--roz .linki a { border-bottom-color: var(--czern); }
+.sekcja--roz .linki a:hover { border-bottom-color: var(--biel); }
 
 /* ---------- hero ---------- */
 
@@ -360,6 +362,11 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
   content: ""; position: absolute; left: 0; top: .5em; width: 12px; height: 7px;
   border-radius: 12px 12px 0 0; background: var(--turkus);
 }
+.tekst-seo { max-width: 760px; }
+.tekst-seo h2 { margin-bottom: 14px; }
+.tekst-seo p { font-size: clamp(1.02rem, 1.6vw, 1.0625rem); color: var(--tekst); margin-bottom: 14px; }
+.tekst-seo a { color: inherit; text-decoration-color: var(--roz); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.tekst-seo a:hover { text-decoration-color: var(--turkus); }
 
 @media (max-width: 859.98px) {
   .podzial { grid-template-columns: 1fr; }
