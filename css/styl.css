@@ -382,13 +382,11 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
   .liczby-opis p { margin-inline: 0; }
 }
 
-.zespol { display: grid; grid-template-columns: minmax(0, 520px) 1fr; gap: clamp(28px, 5vw, 56px); align-items: center; }
-.zespol .zdjecie-ramka { aspect-ratio: 520 / 560; overflow: hidden; border-radius: var(--promien); }
-.zespol .zdjecie-ramka img { object-position: 50% 20%; }
-.zespol article { padding: 26px 0; border-top: 1px solid var(--linia); }
+.zespol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 56px); align-items: start; }
+.zespol .zdjecie-ramka { aspect-ratio: 4 / 4.8; overflow: hidden; border-radius: var(--promien); margin-bottom: 22px; }
 .zespol h2 { font-size: clamp(1.3rem, 2.8vw, 2.375rem); line-height: 1; margin-bottom: 12px; overflow-wrap: break-word; }
 .zespol article p { font-size: clamp(1.02rem, 1.6vw, 1.0625rem); color: var(--tekst); max-width: 44ch; }
-@media (max-width: 859.98px) { .zespol { grid-template-columns: 1fr; } .zespol .zdjecie-ramka { aspect-ratio: 4 / 3.4; } }
+@media (max-width: 859.98px) { .zespol { grid-template-columns: 1fr; } .zespol .zdjecie-ramka { aspect-ratio: 4 / 4.4; } }
 
 .poziomy { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--turkus-linia); }
 .poziomy > div { padding: 28px 24px 12px 0; }
