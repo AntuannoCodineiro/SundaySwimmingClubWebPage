@@ -279,6 +279,7 @@
     if (!email) return;
     var forma = form.querySelector('input[name="forma"]:checked');
     var rodzaj = typ === 'grupowe' ? 'Zajęcia grupowe' : 'Zajęcia indywidualne (' + (forma && forma.value === 'para' ? 'w parze' : 'solo') + ')';
+    var zajecia = typ === 'grupowe' ? String(dane.get('zajecia') || '').trim() : 'termin ustalimy razem z trenerem';
     fetch('https://api.emailjs.com/api/v1.0/email/send', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -286,10 +287,24 @@
         service_id: m.serviceId,
         template_id: m.templateId,
         user_id: m.publicKey,
-        template_params: { email: email, imie: String(dane.get('imie') || '').trim(), rodzaj: rodzaj, basen: String(dane.get('basen') || '').trim() }
+        template_params: {
+          email: email,
+          imie: String(dane.get('imie') || '').trim(),
+          rodzaj: rodzaj,
+          zajecia: zajecia,
+          basen: String(dane.get('basen') || '').trim() || 'do ustalenia'
+        }
       })
     }).catch(function () {});
   }
+
+  document.querySelectorAll('select[data-wybor-zajec]').forEach(function (lista) {
+    var basen = lista.closest('form').querySelector('input[name="basen"]');
+    lista.addEventListener('change', function () {
+      var opcja = lista.options[lista.selectedIndex];
+      basen.value = (opcja && opcja.dataset.basen) || '';
+    });
+  });
 
   document.querySelectorAll('form[data-formularz]').forEach(function (form) {
     var pola = form.querySelectorAll('[required]');
