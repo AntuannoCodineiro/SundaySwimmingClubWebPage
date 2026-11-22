@@ -359,6 +359,12 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 .podzial--odwrocony > :first-child { order: 2; }
 .podzial .zdjecie-ramka { aspect-ratio: 5 / 4.6; overflow: hidden; border-radius: var(--promien); background: var(--turkus-jasny); }
 .podzial .zdjecie-ramka img, .teaser .zdjecie-ramka img, .zespol .zdjecie-ramka img { width: 100%; height: 100%; object-fit: cover; }
+.kupon-ramka { border: 1px solid var(--linia); border-radius: 12px; overflow: hidden; background: var(--biel); }
+.kupon-ramka img { display: block; width: 100%; height: auto; }
+.kupon-akcje { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+.pasek-kupon { background: var(--roz); color: var(--czern); padding: 12px 0; text-align: center; font: 700 clamp(.9rem, 3.4vw, 1rem)/1.4 var(--f-tekst); }
+.pasek-kupon a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.pasek-kupon a:hover { text-decoration-color: var(--biel); }
 .podzial h2 { font-size: clamp(1.5rem, 3.6vw, 2.75rem); line-height: 1.08; margin-bottom: 16px; overflow-wrap: break-word; }
 .podzial p { font-size: clamp(1.02rem, 1.8vw, 1.25rem); line-height: 1.5; color: var(--tekst); margin-bottom: 12px; max-width: 34em; }
 .znacznik {

@@ -3,6 +3,13 @@
 
   var CONF = window.SSC_CONFIG || {};
 
+  /* ---------- elementy sezonowe: znikają po dacie z data-do (RRRR-MM-DD) ---------- */
+  var dzis = new Date();
+  var dzisTekst = dzis.getFullYear() + '-' + ('0' + (dzis.getMonth() + 1)).slice(-2) + '-' + ('0' + dzis.getDate()).slice(-2);
+  document.querySelectorAll('[data-do]').forEach(function (el) {
+    if (dzisTekst > el.dataset.do) el.hidden = true;
+  });
+
   /* ---------- nagłówek: chowa się przy scrollu w dół, wraca przy scrollu w górę ----------
      telefon: nagłówek jest przyklejony (sticky) od samej góry strony, bez zmiany układu,
      komputer: duży nagłówek na górze, po przewinięciu przypina się kompaktowy pasek */
