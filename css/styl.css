@@ -362,8 +362,7 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 .kupon-ramka { border: 1px solid var(--linia); border-radius: 12px; overflow: hidden; background: var(--biel); }
 .kupon-ramka img { display: block; width: 100%; height: auto; }
 .kupon-akcje { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
-.podzial .kupon-adres { margin: 16px 0 0; font-size: .9375rem; line-height: 1.5; overflow-wrap: anywhere; }
-.kupon-adres .link-przycisk { color: var(--turkus-ciemny); text-decoration: underline; }
+#kupon, #formularz { scroll-margin-top: 96px; }
 .pasek-kupon { background: var(--roz); color: var(--czern); padding: 12px 0; text-align: center; font: 700 clamp(.9rem, 3.4vw, 1rem)/1.4 var(--f-tekst); }
 .pasek-kupon a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .pasek-kupon a:hover { text-decoration-color: var(--biel); }
