@@ -639,14 +639,12 @@ h1, h2, h3 { font-family: var(--f-naglowek); font-weight: 800; letter-spacing: -
 @media (max-width: 899.98px) { .stopka-kolumny { grid-template-columns: 1fr 1fr; } .stopka-logo { grid-column: 1 / -1; } }
 @media (max-width: 479.98px) { .stopka-kolumny { grid-template-columns: 1fr; gap: 28px; } }
 
-/* ---------- strony prawne (szkic) ---------- */
+/* ---------- strony prawne ---------- */
 
-.szkic { border: 2px dashed var(--roz); border-radius: 10px; background: #fff0f6; padding: 16px 18px; font: 500 14px/1.5 var(--f-mono); color: #7d0f40; margin-bottom: 36px; }
 .tekst-prawny { max-width: 46em; }
 .tekst-prawny h2 { font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.2; margin: 36px 0 12px; }
 .tekst-prawny p, .tekst-prawny li { font-size: 1.0625rem; color: var(--tekst); margin-bottom: 10px; }
 .tekst-prawny ul { list-style: disc; padding-left: 1.3em; }
-.tekst-prawny .todo { background: #fff0f6; border-left: 4px solid var(--roz); padding: 8px 12px; font: 500 13px/1.5 var(--f-mono); color: #7d0f40; }
 
 /* ---------- cookies ---------- */
 
