@@ -10,6 +10,39 @@
     if (dzisTekst > el.dataset.do) el.hidden = true;
   });
 
+  /* ---------- przycisk kopiowania tekstu (np. adresu e-mail) do schowka ---------- */
+  function kopiujAwaryjnie(tekst) {
+    return new Promise(function (ok, blad) {
+      var pole = document.createElement('textarea');
+      pole.value = tekst;
+      pole.setAttribute('readonly', '');
+      pole.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(pole);
+      pole.select();
+      var udane = false;
+      try { udane = document.execCommand('copy'); } catch (e) { udane = false; }
+      document.body.removeChild(pole);
+      if (udane) ok(); else blad();
+    });
+  }
+
+  function kopiuj(tekst) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(tekst).catch(function () { return kopiujAwaryjnie(tekst); });
+    }
+    return kopiujAwaryjnie(tekst);
+  }
+
+  document.querySelectorAll('[data-kopiuj]').forEach(function (przycisk) {
+    var etykieta = przycisk.textContent;
+    przycisk.addEventListener('click', function () {
+      kopiuj(przycisk.dataset.kopiuj).then(function () {
+        przycisk.textContent = 'Skopiowano';
+        setTimeout(function () { przycisk.textContent = etykieta; }, 2000);
+      }, function () {});
+    });
+  });
+
   /* ---------- nagłówek: chowa się przy scrollu w dół, wraca przy scrollu w górę ----------
      telefon: nagłówek jest przyklejony (sticky) od samej góry strony, bez zmiany układu,
      komputer: duży nagłówek na górze, po przewinięciu przypina się kompaktowy pasek */
