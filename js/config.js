@@ -19,7 +19,7 @@ window.SSC_CONFIG = {
     serviceId: 'service_xhaxnm5',
     templateGrupowe: 'template_fmhpqxd',
     templateIndywidualne: 'template_h7kripp',
-    publicKey: ''
+    publicKey: 'UtDN_JW9rERMTCpu-'
   },
   analityka: {
     /* Identyfikator pomiaru Google Analytics 4. Skrypt Google ładuje się dopiero po zgodzie
