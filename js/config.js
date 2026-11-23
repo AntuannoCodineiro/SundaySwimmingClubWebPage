@@ -16,9 +16,9 @@ window.SSC_CONFIG = {
      (treści w maile/). Dopóki któreś z pól jest puste, strona go nie wysyła.
      Identyfikatory i klucz publiczny bierze się z panelu EmailJS, nie są tajne. Prywatnego klucza tu nie wpisuj. */
   mailZwrotny: {
-    serviceId: '',
-    templateGrupowe: '',
-    templateIndywidualne: '',
+    serviceId: 'service_xhaxnm5',
+    templateGrupowe: 'template_fmhpqxd',
+    templateIndywidualne: 'template_h7kripp',
     publicKey: ''
   },
   analityka: {
