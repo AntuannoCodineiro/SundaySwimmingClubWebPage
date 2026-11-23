@@ -280,7 +280,8 @@
   function wyslijMailZwrotny(form) {
     var m = CONF.mailZwrotny || {};
     var typ = form.dataset.typ;
-    if (!m.serviceId || !m.templateId || !m.publicKey || (typ !== 'grupowe' && typ !== 'indywidualne')) return;
+    var szablon = typ === 'grupowe' ? m.templateGrupowe : typ === 'indywidualne' ? m.templateIndywidualne : '';
+    if (!m.serviceId || !szablon || !m.publicKey) return;
     var dane = new FormData(form);
     var email = String(dane.get('email') || '').trim();
     if (!email) return;
@@ -292,7 +293,7 @@
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         service_id: m.serviceId,
-        template_id: m.templateId,
+        template_id: szablon,
         user_id: m.publicKey,
         template_params: {
           email: email,

@@ -12,11 +12,13 @@ window.SSC_CONFIG = {
     klucz: '7846be8c-3fcc-4eba-b641-f9190c10f8fb',
     emailKlubu: 'sundayswimmingclubpoznan@gmail.com'
   },
-  /* Mail zwrotny po zapisie na zajęcia (EmailJS). Dopóki któreś z pól jest puste, strona go nie wysyła.
+  /* Mail zwrotny po zapisie na zajęcia (EmailJS). Dwa szablony: dla zapisu grupowego i indywidualnego
+     (treści w maile/). Dopóki któreś z pól jest puste, strona go nie wysyła.
      Identyfikatory i klucz publiczny bierze się z panelu EmailJS, nie są tajne. Prywatnego klucza tu nie wpisuj. */
   mailZwrotny: {
     serviceId: '',
-    templateId: '',
+    templateGrupowe: '',
+    templateIndywidualne: '',
     publicKey: ''
   },
   analityka: {
